@@ -1,0 +1,148 @@
+.roleModal {
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.form label {
+  display: grid;
+  gap: 7px;
+  color: #41435a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.formError {
+  margin: 0;
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.channelLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 18px;
+  color: #6328e8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dashboardPanel {
+  width: min(1240px, 93%);
+  margin: 34px auto;
+  padding: 28px 0;
+  border-top: 1px solid #e7e7ef;
+  color: #11142b;
+}
+
+.dashboardHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.dashboardHeading h2,
+.dashboardProfile h3,
+.dashboardRequests h3 {
+  margin: 0 0 7px;
+}
+
+.dashboardHeading p,
+.dashboardProfile p {
+  margin: 0;
+  color: #656579;
+}
+
+.dashboardProfile {
+  padding: 18px 0;
+  border-top: 1px solid #eeeef3;
+  border-bottom: 1px solid #eeeef3;
+}
+
+.dashboardRequests {
+  padding-top: 20px;
+}
+
+.requestItem {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(120px, 0.7fr) minmax(180px, 2fr) auto auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eeeef3;
+}
+
+.requestItem > div:first-child,
+.requestItem > div:nth-child(2) {
+  display: grid;
+  gap: 4px;
+}
+
+.requestItem small {
+  color: #777789;
+}
+
+.requestItem p {
+  margin: 0;
+  color: #41435a;
+  line-height: 1.45;
+}
+
+.requestStatus {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #f1f1f6;
+  color: #41435a;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.requestStatus.accepted {
+  background: #e8f6ed;
+  color: #16713b;
+}
+
+.requestStatus.rejected {
+  background: #fff0ee;
+  color: #a53328;
+}
+
+.requestActions {
+  display: flex;
+  gap: 7px;
+}
+
+.requestActions button {
+  padding: 7px 11px;
+}
+
+.requestModal .form label input,
+.requestModal .form label textarea {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .requestItem {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .requestItem p,
+  .requestActions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .navActions .dashboardButton {
+    display: inline-flex;
+  }
+
+  .dashboardHeading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
